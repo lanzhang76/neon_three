@@ -81,7 +81,7 @@ function init() {
     color: params.glowColor,
   });
   //   loader.setPath("../src/models/");
-  loader.setPath("/");
+  loader.setPath("/assets/");
   loader.load("text2.obj", function (obj) {
     object = obj;
     object.traverse(function (child) {
