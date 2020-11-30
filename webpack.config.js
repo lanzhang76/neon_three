@@ -19,11 +19,16 @@ module.exports = {
         test: /\.obj$/,
         loader: "webpack-obj-loader",
       },
+      {
+        test: /\.js$/,
+        enforce: "pre",
+        use: ["source-map-loader"],
+      },
     ],
   },
   output: {
     path: path.resolve(__dirname, "dist"),
-    filename: "./dist/bundle.js",
+    filename: "bundle.js",
     publicPath: "",
   },
   plugins: [
@@ -31,6 +36,6 @@ module.exports = {
       template: "src/template.html",
       title: "New template",
     }),
-    new CleanWebpackPlugin(),
+    // new CleanWebpackPlugin(),
   ],
 };
