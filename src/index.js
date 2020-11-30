@@ -80,7 +80,8 @@ function init() {
   var color_material = new THREE.MeshStandardMaterial({
     color: params.glowColor,
   });
-  loader.setPath("../src/models/");
+  //   loader.setPath("../src/models/");
+  loader.setPath("/");
   loader.load("text2.obj", function (obj) {
     object = obj;
     object.traverse(function (child) {
